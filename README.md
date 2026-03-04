@@ -13,15 +13,7 @@ Database ini bernama db_musik. Terdiri dari dua tabel utama yang saling berelasi
    + judul_lagu: Varchar(100).id_artis: Foreign Key (Referensi ke tb_artis).
    
 **📑 Data yang Tersedia**
-Daftar artis yang telah diinputkan meliputi:
-+ Nadin Amizah
-+ Hindia
-+ Feast
-+ Perunggu
-+ Sheila On 7
-+ LANY 
-
-Beberapa contoh lagu yang tersimpan:
+Daftar artis dan lagu yang telah diinputkan meliputi:
 + Kekal (Nadin Amizah) 
 + Membasuh & Evakuasi (Hindia) 
 + Berita Kehilangan (Feast) 
