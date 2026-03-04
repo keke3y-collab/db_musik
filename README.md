@@ -1,16 +1,27 @@
-**🎵 Database: db_musik 🎧**
+# Dokumentasi Database: db\_musik 🎵
 
-Proyek ini berisi dokumentasi langkah-langkah pembuatan database, tabel, manipulasi data, serta pengujian berbagai jenis Join pada MariaDB.
+Dokumentasi ini berisi langkah-langkah pembuatan database, tabel, manipulasi data, serta pengujian berbagai jenis **Join** pada MariaDB.
 
-**🗂️ Struktur Database**
 
-Database ini bernama db_musik. Terdiri dari dua tabel utama yang saling berelasi:
-1. Tabel: **tb_artis** Digunakan untuk menyimpan data musisi atau band.
-   + id_artis: Primary Key, Integer, Auto Increment.
-   + nama_artis: Varchar(50).
-2. Tabel: **tb_lagu** Digunakan untuk menyimpan data judul lagu yang terhubung ke tabel artis.
-   + id_lagu: Primary Key, Integer, Auto Increment.
-   + judul_lagu: Varchar(100).id_artis: Foreign Key (Referensi ke tb_artis).
+## 🗂️ Struktur Database
+
+Database ini bernama `db_musik` dan terdiri dari dua tabel utama yang saling berelasi:
+
+### 1\. Tabel: `tb_artis`
+
+Digunakan untuk menyimpan data musisi atau band.
+
+  * **id\_artis**: Primary Key, Integer, Auto Increment.
+  * **nama\_artis**: Varchar(50).
+
+### 2\. Tabel: `tb_lagu`
+
+Digunakan untuk menyimpan data judul lagu yang terhubung ke tabel artis.
+
+  * **id\_lagu**: Primary Key, Integer, Auto Increment.
+  * **judul\_lagu**: Varchar(100).
+  * **id\_artis**: Foreign Key (Referensi ke `tb_artis`).
+
    
 ## 📑 Data yang Tersedia
 
