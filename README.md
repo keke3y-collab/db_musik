@@ -22,4 +22,7 @@ Daftar artis dan lagu yang telah diinputkan meliputi:
 
 **🔍 Pengujian Query**
 + Inner Join
+   select tb_artis.nama_artis, tb_lagu.judul_lagu
+   from tb_artis
+   INNER JOIN tb_lagu ON tb_artis.id_artis = tb_lagu.id_artis;
 Menampilkan lagu yang memiliki pasangan artis yang tepat.
