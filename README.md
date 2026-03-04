@@ -20,7 +20,7 @@ Daftar artis dan lagu yang telah diinputkan meliputi:
 + Kalibata, 2012 (Perunggu) 
 + Seberapa Pantas (Sheila On 7) 
 
-**🔍 Pengujian Query**
+**\🔍 Pengujian Query**
 **1. Inner Join** 
 Menampilkan lagu yang memiliki pasangan artis yang tepat.
 ```sql
