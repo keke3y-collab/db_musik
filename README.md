@@ -12,7 +12,7 @@ Database ini bernama db_musik. Terdiri dari dua tabel utama yang saling berelasi
    + id_lagu: Primary Key, Integer, Auto Increment.
    + judul_lagu: Varchar(100).id_artis: Foreign Key (Referensi ke tb_artis).
    
-**📑 Data yang Tersedia**
+**\📑 Data yang Tersedia**
 Daftar artis dan lagu yang telah diinputkan meliputi:
 + Kekal (Nadin Amizah) 
 + Membasuh & Evakuasi (Hindia) 
