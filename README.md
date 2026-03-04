@@ -14,8 +14,8 @@ Database ini bernama db_musik. Terdiri dari dua tabel utama yang saling berelasi
    
 **📑 Data yang Tersedia**
 Daftar artis yang telah diinputkan meliputi:
-Nadin Amizah 
-Hindia 
++ Nadin Amizah 
+* Hindia 
 Feast 
 Perunggu 
 Sheila On 7 
