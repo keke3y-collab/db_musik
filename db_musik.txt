@@ -1,0 +1,137 @@
+Setting environment for using XAMPP for Windows.
+Hype7Amd@HYPE c:\xampp4
+# mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 41
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> create database db_musik;
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [(none)]> use db_musik;
+Database changed
+MariaDB [db_musik]> create table tb_artis(
+    -> id_artis int primary key auto_increment,
+    -> nama_artis varchar(50));
+Query OK, 0 rows affected (0.017 sec)
+
+MariaDB [db_musik]> create table tb_lagu(
+    -> id_lagu int primary key auto_increment,
+    -> judul_lagu varchar(100),
+    -> id_artis int,
+    -> foreign key (id_artis) references tb_artis(id_artis));
+Query OK, 0 rows affected (0.091 sec)
+
+MariaDB [db_musik]> insert into tb_artis
+    -> (id_artis, nama_artis) values
+    -> ('', 'Nadin Amizah'),
+    -> ('', 'Hindia'),
+    -> ('', 'Feast'),
+    -> ('', 'Perunggu'),
+    -> ('', 'Sheila On 7');
+Query OK, 5 rows affected, 5 warnings (0.010 sec)
+Records: 5  Duplicates: 0  Warnings: 5
+
+MariaDB [db_musik]> select * from tb_artis;
++----------+--------------+
+| id_artis | nama_artis   |
++----------+--------------+
+|        1 | Nadin Amizah |
+|        2 | Hindia       |
+|        3 | Feast        |
+|        4 | Perunggu     |
+|        5 | Sheila On 7  |
++----------+--------------+
+5 rows in set (0.001 sec)
+
+MariaDB [db_musik]> insert into tb_lagu
+    -> (id_lagu, judul_lagu, id_artis) values
+    -> ('', 'Kekal', 1),
+    -> ('', 'Membasuh', 2),
+    -> ('', 'Berita Kehilangan', 3),
+    -> ('', 'Kalibata, 2012', 4),
+    -> ('', 'Seberapa Pantas', 5);
+Query OK, 5 rows affected, 5 warnings (0.010 sec)
+Records: 5  Duplicates: 0  Warnings: 5
+
+MariaDB [db_musik]> select * from tb_lagu;
++---------+-------------------+----------+
+| id_lagu | judul_lagu        | id_artis |
++---------+-------------------+----------+
+|       1 | Kekal             |        1 |
+|       2 | Membasuh          |        2 |
+|       3 | Berita Kehilangan |        3 |
+|       4 | Kalibata, 2012    |        4 |
+|       5 | Seberapa Pantas   |        5 |
++---------+-------------------+----------+
+5 rows in set (0.001 sec)
+
+MariaDB [db_musik]> insert into tb_lagu
+    -> (id_lagu, judul_lagu, id_artis) values
+    -> ('', 'Evakuasi', 2);
+Query OK, 1 row affected, 1 warning (0.009 sec)
+
+MariaDB [db_musik]> select * from tb_lagu;
++---------+-------------------+----------+
+| id_lagu | judul_lagu        | id_artis |
++---------+-------------------+----------+
+|       1 | Kekal             |        1 |
+|       2 | Membasuh          |        2 |
+|       3 | Berita Kehilangan |        3 |
+|       4 | Kalibata, 2012    |        4 |
+|       5 | Seberapa Pantas   |        5 |
+|       6 | Evakuasi          |        2 |
++---------+-------------------+----------+
+6 rows in set (0.001 sec)
+
+MariaDB [db_musik]> select tb_artis.nama_artis, tb_lagu.judul_lagu from tb_artis INNER JOIN tb_lagu ON tb_artis.id_artis = tb_lagu.id_artis;
++--------------+-------------------+
+| nama_artis   | judul_lagu        |
++--------------+-------------------+
+| Nadin Amizah | Kekal             |
+| Hindia       | Membasuh          |
+| Feast        | Berita Kehilangan |
+| Perunggu     | Kalibata, 2012    |
+| Sheila On 7  | Seberapa Pantas   |
+| Hindia       | Evakuasi          |
++--------------+-------------------+
+6 rows in set (0.001 sec)
+
+MariaDB [db_musik]> insert into tb_artis
+    -> (id_artis, nama_artis) values
+    -> ('', 'LANY');
+Query OK, 1 row affected, 1 warning (0.010 sec)
+
+MariaDB [db_musik]> select tb_artis.nama_artis, tb_lagu.judul_lagu from tb_artis LEFT JOIN tb_lagu ON tb_artis.id_artis = tb_lagu.id_artis;
++--------------+-------------------+
+| nama_artis   | judul_lagu        |
++--------------+-------------------+
+| Nadin Amizah | Kekal             |
+| Hindia       | Membasuh          |
+| Hindia       | Evakuasi          |
+| Feast        | Berita Kehilangan |
+| Perunggu     | Kalibata, 2012    |
+| Sheila On 7  | Seberapa Pantas   |
+| LANY         | NULL              |
++--------------+-------------------+
+7 rows in set (0.001 sec)
+
+MariaDB [db_musik]> select tb_lagu.judul_lagu, tb_artis.nama_artis from tb_lagu RIGHT JOIN tb_artis ON tb_lagu.id_artis = tb_artis.id_artis;
++-------------------+--------------+
+| judul_lagu        | nama_artis   |
++-------------------+--------------+
+| Kekal             | Nadin Amizah |
+| Membasuh          | Hindia       |
+| Evakuasi          | Hindia       |
+| Berita Kehilangan | Feast        |
+| Kalibata, 2012    | Perunggu     |
+| Seberapa Pantas   | Sheila On 7  |
+| NULL              | LANY         |
++-------------------+--------------+
+7 rows in set (0.001 sec)
+
+MariaDB [db_musik]>
