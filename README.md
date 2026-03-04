@@ -1,4 +1,4 @@
-# Dokumentasi Database: db\_musik 🎵
+# Database: db\_musik 🎵
 
 Dokumentasi ini berisi langkah-langkah pembuatan database, tabel, manipulasi data, serta pengujian berbagai jenis **Join** pada MariaDB.
 
