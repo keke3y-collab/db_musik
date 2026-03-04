@@ -21,10 +21,10 @@ Daftar artis dan lagu yang telah diinputkan meliputi:
 + Seberapa Pantas (Sheila On 7) 
 
 **🔍 Pengujian Query**
-1. Inner Join
-Menampilkan lagu yang memiliki pasangan artis yang tepat.
-
-SQL
+**1. [cite_start]Inner Join** [cite: 26]
+[cite_start]Menampilkan lagu yang memiliki pasangan artis yang tepat[cite: 26].
+```sql
+-- Kode ini akan berwarna biru/ungu di GitHub karena label 'sql'
 SELECT tb_artis.nama_artis, tb_lagu.judul_lagu 
 FROM tb_artis 
-INNER JOIN tb_lagu ON tb_artis.id_artis = tb_lagu.id_artis
+INNER JOIN tb_lagu ON tb_artis.id_artis = tb_lagu.id_artis;
