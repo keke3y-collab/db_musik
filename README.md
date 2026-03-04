@@ -22,9 +22,9 @@ Daftar artis dan lagu yang telah diinputkan meliputi:
 
 **🔍 Pengujian Query**
 **1. Inner Join** 
-[cite_start]Menampilkan lagu yang memiliki pasangan artis yang tepat[cite: 26].
+Menampilkan lagu yang memiliki pasangan artis yang tepat.
 ```sql
 
-SELECT tb_artis.nama_artis, tb_lagu.judul_lagu 
-FROM tb_artis 
-INNER JOIN tb_lagu ON tb_artis.id_artis = tb_lagu.id_artis;
+ select tb_artis.nama_artis, tb_lagu.judul_lagu
+ from tb_artis
+ INNER JOIN tb_lagu ON tb_artis.id_artis = tb_lagu.id_artis;
