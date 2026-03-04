@@ -21,5 +21,5 @@ Daftar artis dan lagu yang telah diinputkan meliputi:
 + Seberapa Pantas (Sheila On 7) 
 
 **🔍 Pengujian Query**
-+🤝 Inner Join
++ Inner Join
 Menampilkan lagu yang memiliki pasangan artis yang tepat.
