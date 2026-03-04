@@ -20,11 +20,33 @@ Daftar artis dan lagu yang telah diinputkan meliputi:
 + Kalibata, 2012 (Perunggu) 
 + Seberapa Pantas (Sheila On 7) 
 
-**\🔍 Pengujian Query**
-**1. Inner Join** 
-Menampilkan lagu yang memiliki pasangan artis yang tepat.
-```sql
+## 🔍 Pengujian Query
+### 1\. Inner Join
 
- select tb_artis.nama_artis, tb_lagu.judul_lagu
- from tb_artis
- INNER JOIN tb_lagu ON tb_artis.id_artis = tb_lagu.id_artis;
+Menampilkan lagu yang memiliki pasangan artis yang tepat.
+
+```sql
+SELECT tb_artis.nama_artis, tb_lagu.judul_lagu 
+FROM tb_artis 
+INNER JOIN tb_lagu ON tb_artis.id_artis = tb_lagu.id_artis;
+```
+
+### 2\. Left Join
+
+Menampilkan semua artis, termasuk yang belum memiliki lagu (seperti **LANY**).
+
+```sql
+SELECT tb_artis.nama_artis, tb_lagu.judul_lagu 
+FROM tb_artis 
+LEFT JOIN tb_lagu ON tb_artis.id_artis = tb_lagu.id_artis;
+```
+
+### 3\. Right Join
+
+Menampilkan semua data dari tabel kanan dan mencocokkannya ke tabel kiri.
+
+```sql
+SELECT tb_lagu.judul_lagu, tb_artis.nama_artis 
+FROM tb_lagu 
+RIGHT JOIN tb_artis ON tb_lagu.id_artis = tb_artis.id_artis;
+```
