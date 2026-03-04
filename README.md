@@ -9,8 +9,8 @@ Database ini bernama db_musik. Terdiri dari dua tabel utama yang saling berelasi
    - id_artis: Primary Key, Integer, Auto Increment.
    - nama_artis: Varchar(50).
 2. Tabel: **tb_lagu** Digunakan untuk menyimpan data judul lagu yang terhubung ke tabel artis.
-   id_lagu: Primary Key, Integer, Auto Increment.
-   judul_lagu: Varchar(100).id_artis: Foreign Key (Referensi ke tb_artis).
+   - id_lagu: Primary Key, Integer, Auto Increment.
+   - judul_lagu: Varchar(100).id_artis: Foreign Key (Referensi ke tb_artis).
    
 **📑 Data yang Tersedia**
 Daftar artis yang telah diinputkan meliputi:
