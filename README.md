@@ -32,6 +32,7 @@ Daftar artis dan lagu yang telah diinputkan meliputi:
   * **Berita Kehilangan** (Feast)
   * **Kalibata, 2012** (Perunggu)
   * **Seberapa Pantas** (Sheila On 7)
+  * **LANY** (Terdaftar sebagai artis, namun belum memiliki lagu)
 
 ## 🔍 Pengujian Query
 ### 1\. Inner Join
