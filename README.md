@@ -53,6 +53,9 @@ Hasil Query:
 | Perunggu | Kalibata, 2012 |
 | Sheila On 7 | Seberapa Pantas |
 | Hindia | Evakuasi |
+
+**Catatan: Artis LANY tidak muncul di sini karena Inner Join hanya mengambil data yang memiliki pasangan di kedua tabel.**
+
 ### 2\. Left Join
 
 Menampilkan semua artis, termasuk yang belum memiliki lagu (seperti **LANY**).
