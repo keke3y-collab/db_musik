@@ -43,7 +43,15 @@ SELECT tb_artis.nama_artis, tb_lagu.judul_lagu
 FROM tb_artis 
 INNER JOIN tb_lagu ON tb_artis.id_artis = tb_lagu.id_artis;
 ```
-
+Hasil Query:
+| nama_artis | judul_lagu |
+| :--- | :--- |
+| Nadin Amizah | Kekal |
+| Hindia | Membasuh |
+| Feast | Berita Kehilangan |
+| Perunggu | Kalibata, 2012 |
+| Sheila On 7 | Seberapa Pantas |
+| Hindia | Evakuasi |
 ### 2\. Left Join
 
 Menampilkan semua artis, termasuk yang belum memiliki lagu (seperti **LANY**).
