@@ -61,7 +61,16 @@ SELECT tb_artis.nama_artis, tb_lagu.judul_lagu
 FROM tb_artis 
 LEFT JOIN tb_lagu ON tb_artis.id_artis = tb_lagu.id_artis;
 ```
-
+Hasil Query:
+| nama_artis | judul_lagu |
+| :--- | :--- |
+| Nadin Amizah | Kekal |
+| Hindia | Membasuh |
+| Hindia | Evakuasi |
+| Feast | Berita Kehilangan |
+| Perunggu | Kalibata, 2012 |
+| Sheila On 7 | Seberapa Pantas |
+| LANY | NULL |
 ### 3\. Right Join
 
 Menampilkan semua data dari tabel kanan dan mencocokkannya ke tabel kiri.
@@ -71,3 +80,13 @@ SELECT tb_lagu.judul_lagu, tb_artis.nama_artis
 FROM tb_lagu 
 RIGHT JOIN tb_artis ON tb_lagu.id_artis = tb_artis.id_artis;
 ```
+Hasil Query:
+| judul_lagu | nama_artis |
+| :--- | :--- |
+| Kekal | Nadin Amizah |
+| Membasuh | Hindia |
+| Evakuasi | Hindia |
+| Berita Kehilangan | Feast |
+| Kalibata, 2012 | Perunggu |
+| Seberapa Pantas | Sheila On 7 |
+| NULL | LANY |
